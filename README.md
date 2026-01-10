@@ -805,14 +805,15 @@ Congratulations! You've completed all MongoDB Atlas Search labs. You now know ho
 
 - **Explore** advanced topics within Atlas Search
    - additional operators like `phrase`, `wildcard`, and `regex`
-   - query, filter and retrieve arrays of objects (https://www.mongodb.com/docs/atlas/atlas-search/return-scope/)
-   - paginate the results (https://www.mongodb.com/docs/atlas/atlas-search/paginate-results/)
-   - use views with Atlas Search (https://www.mongodb.com/docs/atlas/atlas-search/view-support/)
-   - parallelize query execution across segments (https://www.mongodb.com/docs/atlas/atlas-search/concurrent-query/)
-   - return stored source fields (https://www.mongodb.com/docs/atlas/atlas-search/return-stored-source/)
-   - hybrid search, i.e. combining full-text search and vector search for more relevant results (https://www.mongodb.com/docs/atlas/atlas-search/tutorial/hybrid-search/)
+   - [query, filter and retrieve arrays of objects](https://www.mongodb.com/docs/atlas/atlas-search/return-scope/)
+   - [paginate the results](https://www.mongodb.com/docs/atlas/atlas-search/paginate-results/)
+   - [complex query capability for advanced users](https://www.mongodb.com/docs/atlas/atlas-search/operators-collectors/queryString/)
+   - [use views with Atlas Search](https://www.mongodb.com/docs/atlas/atlas-search/view-support/)
+   - [parallelize query execution across segments](https://www.mongodb.com/docs/atlas/atlas-search/concurrent-query/)
+   - [return stored source fields](https://www.mongodb.com/docs/atlas/atlas-search/return-stored-source/)
+   - [hybrid search](https://www.mongodb.com/docs/atlas/atlas-search/tutorial/hybrid-search/), i.e. combining full-text search and vector search for more relevant results
 - **Review** the [MongoDB Atlas Search Documentation](https://www.mongodb.com/docs/atlas/atlas-search/)
-- **Achieve** the MongoDB Skill Badge on Search Fundamentals (https://learn.mongodb.com/courses/search-fundamentals)
+- **Achieve** the MongoDB Skill Badge on [Search Fundamentals](https://learn.mongodb.com/courses/search-fundamentals)
 
 ---
 
@@ -820,7 +821,13 @@ Congratulations! You've completed all MongoDB Atlas Search labs. You now know ho
 
 This section contains complete code solutions for all labs. Reference these if you need help implementing any exercise.
 
+<details>
+    <summary>Click to see</summary>
+
 ### Lab 2 Solution: Full-Text Search Implementation
+
+<details>
+    <summary>Click to see</summary>
 
 ```javascript
 async function fullTextSearch(query) {
@@ -847,10 +854,14 @@ async function fullTextSearch(query) {
     }
 }
 ```
+</details>
 
 ---
 
 ### Lab 3.1 Solution: Fuzzy Search
+
+<details>
+    <summary>Click to see</summary>
 
 ```javascript
 {
@@ -868,10 +879,14 @@ async function fullTextSearch(query) {
     }
 }
 ```
+</details>
 
 ---
 
 ### Lab 3.2 Solution: Match Criteria
+
+<details>
+    <summary>Click to see</summary>
 
 ```javascript
 {
@@ -888,10 +903,14 @@ async function fullTextSearch(query) {
     }
 }
 ```
+</details>
 
 ---
 
 ### Lab 4.1 Solution: Expose Search Score
+
+<details>
+    <summary>Click to see</summary>
 
 ```javascript
 let cursor = moviesCollection.aggregate([
@@ -912,12 +931,19 @@ let cursor = moviesCollection.aggregate([
     }
 ]);
 ```
+</details>
 
 ---
 
 ### Lab 4.2 Solution: Score Boosting
 
+<details>
+    <summary>Click to see</summary>
+
 **Option A: Constant Score**
+
+<details>
+    <summary>Click to see</summary>
 
 ```javascript
 {
@@ -935,8 +961,12 @@ let cursor = moviesCollection.aggregate([
     }
 }
 ```
+</details>
 
 **Option B: Boost by Factor**
+
+<details>
+    <summary>Click to see</summary>
 
 ```javascript
 {
@@ -954,8 +984,12 @@ let cursor = moviesCollection.aggregate([
     }
 }
 ```
+</details>
 
 **Option C: Boost by Field Value (IMDb Rating)**
+
+<details>
+    <summary>Click to see</summary>
 
 ```javascript
 {
@@ -974,10 +1008,15 @@ let cursor = moviesCollection.aggregate([
     }
 }
 ```
+<details>
+</details>
 
 ---
 
 ### Lab 4.3 Solution: Sort by Year
+
+<details>
+    <summary>Click to see</summary>
 
 ```javascript
 {
@@ -993,10 +1032,14 @@ let cursor = moviesCollection.aggregate([
     }
 }
 ```
+</details>
 
 ---
 
 ### Lab 5.1 Solution: Compound with Must
+
+<details>
+    <summary>Click to see</summary>
 
 ```javascript
 {
@@ -1021,10 +1064,14 @@ let cursor = moviesCollection.aggregate([
     }
 }
 ```
+</details>
 
 ---
 
 ### Lab 5.2 Solution: Compound with Filter
+
+<details>
+    <summary>Click to see</summary>
 
 ```javascript
 {
@@ -1051,10 +1098,14 @@ let cursor = moviesCollection.aggregate([
     }
 }
 ```
+</details>
 
 ---
 
 ### Lab 6.2 Solution: Autocomplete Implementation
+
+<details>
+    <summary>Click to see</summary>
 
 ```javascript
 async function autocompleteTitle(query) {
@@ -1100,10 +1151,14 @@ autocomplete: {
     }
 }
 ```
+</details>
 
 ---
 
 ### Lab 7.2 Solution: Highlighting Implementation
+
+<details>
+    <summary>Click to see</summary>
 
 ```javascript
 {
@@ -1139,10 +1194,14 @@ autocomplete: {
     }
 }
 ```
+</details>
 
 ---
 
 ### Lab 8.2 Solution: Synonyms in Search
+
+<details>
+    <summary>Click to see</summary>
 
 ```javascript
 {
@@ -1181,10 +1240,14 @@ autocomplete: {
     }
 }
 ```
+</details>
 
 ---
 
 ### Lab 9.2 Solution: Faceted Search Implementation
+
+<details>
+    <summary>Click to see</summary>
 
 ```javascript
 async function searchFacets(query) {
@@ -1268,6 +1331,9 @@ async function searchFacets(query) {
     }
 }
 ```
+</details>
+
+</details>
 
 ---
 
