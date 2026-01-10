@@ -1009,6 +1009,7 @@ let cursor = moviesCollection.aggregate([
 }
 ```
 </details>
+</details>
 
 ---
 
