@@ -42,7 +42,7 @@ Before starting the labs, ensure you have completed the following setup:
 
 ### 2. Local Development Tools
 
-- ✅ **Node.js & npm** - Install Node.js v14 or higher
+- ✅ **Node.js & npm** - Install Node.js v16 or higher
   - Download from: https://nodejs.org/
   - Verify installation:
     ```bash
