@@ -416,13 +416,15 @@ score: {
 
 ### Exercise
 
-1. In the `$search` stage, add a `sort` option (as a sibling to the `text` operator):
+1. In the Atlas web console, edit the `movie-search` index with Visual Editor. Add a new field mapping for `year` field with data type as `Number`. Save the changes and wait for the index to be **Ready**.
+
+2. In the `$search` stage, add a `sort` option (as a sibling to the `text` operator):
 
 ```javascript
 sort: { year: -1 }
 ```
 
-2. Run a search and verify results are sorted by most recent year first
+3. Run a search and verify results are sorted by most recent year first
 
 **💡 See [Lab 4.3 Solution](#lab-43-solution-sort-by-year) for the complete code.**
 
